@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="d-flex align-items-center">
+    <!-- <img class="background-img" src="./images/stud_detail_wallpaper.gif" alt="gif"> -->
+    <div class="container-fluid py-4" style="border-radius: 15px;">
+        <div class="justify-content-center main-content px-3 px-xl-0" style="border-radius: 15px;">
+            <div class="" style="border-radius: 15px; overflow: hidden;">
+                <div class="col-lg-10 col-xl-8 col-12 mx-auto info-container bg-white p-0">
+                    <div class="d-flex" style="width: 200%;">
+                        <div class="details-container px-3 pt-3 px-sm-5 pt-sm-5">
+                            <h2 class="text-uppercase m-0" style="letter-spacing: .05em; color: #eb3156;">Student
+                                Details
+                            </h2>
+                            <hr>
+                            <div class="row">
+                                <div class="detail-container name col-12 col-md-6 my-2">
+                                    <p class="text-uppercase m-0">Name</p>
+                                    <h4>Arunkumar S</h4>
+                                </div>
+                                <div class="detail-container roll col-6 col-md-3 my-2">
+                                    <p class="text-uppercase m-0">Roll No</p>
+                                    <h4>71762105066</h4>
+                                </div>
+                                <div class="detail-container dob col-6 col-md-3 my-2">
+                                    <p class="text-uppercase m-0">Date of Birth</p>
+                                    <h4>23-03-2003</h4>
+                                </div>
+                                <div class="detail-container email col-12 col-md-6 my-2">
+                                    <p class="text-uppercase m-0">Email ID</p>
+                                    <h4>71762105066@cit.edu.in</h4>
+                                </div>
+                                <div class="detail-container branch col-3 col-md-2 my-2">
+                                    <p class="text-uppercase m-0">Course</p>
+                                    <h4>BE</h4>
+                                </div>
+                                <div class="detail-container dept col-3 col-md-2 my-2">
+                                    <p class="text-uppercase m-0">Branch</p>
+                                    <h4>CSE</h4>
+                                </div>
+                            </div>
+                            <div class="actions-container my-3">
+                                <button class="btn" id="addEventBtn">Add Event &rarr;</button>
+                            </div>
+                        </div>
+                        <div class="create-event-container px-3 pt-3 px-sm-5 pt-sm-5">
+                            <h2 class="text-uppercase m-0" style="letter-spacing: .05em; color: #eb3156;">Create Event
+                            </h2>
+                            <hr>
+                            <form action="">
+                                <div class="row">
+                                    <div class="input-container name col-12 col-md-6 my-2">
+                                        <p class="text-uppercase m-0">Event Name</p>
+                                        <input type="text" name="event-name" id="event-name"
+                                            placeholder="Enter Event Name" required>
+                                    </div>
+                                    <div class="input-container branch col-12 col-md-6 my-2">
+                                        <p class="text-uppercase m-0">Attachment</p>
+                                        <input type="file" name="event-file" id="event-file" required hidden
+                                            accept=".pdf, .png, .jpg, .jpeg">
+                                        <div class="d-flex">
+                                            <input type="text" name="event-filename" id="event-filename"
+                                                placeholder="Eg. (*.pdf,*.png,*.jpg,*.jpeg) (&lt;1MB)" required
+                                                disabled>
+                                            <button type="button" class="btn" onclick="el.click()">Upload</button>
+                                        </div>
+                                    </div>
+                                    <div class="input-container email col-6 col-md-3 my-2">
+                                        <p class="text-uppercase m-0">Event Type</p>
+                                        <select name="event-type" id="event-type" required>
+                                            <option selected disabled hidden>Select</option>
+                                            <option value="Webinar">Seminar</option>
+                                            <option value="Webinar">Webinar</option>
+                                            <option value="Webinar">Workshop</option>
+                                            <option value="Course Certification">Course Certification</option>
+                                            <option value="Hackathon">Hackathon</option>
+                                            <option value="Coding Contest">Coding Contest</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-container roll col-6 col-md-3 my-2">
+                                        <p class="text-uppercase m-0">Date of Event</p>
+                                        <input type="date" name="event-date" id="event-date" required>
+                                    </div>
+                                    <div class="input-container dob col-6 col-md-3 my-2">
+                                        <p class="text-uppercase m-0">Event Duration</p>
+                                        <input type="number" name="event-duration" id="event-duration"
+                                            placeholder="Enter Days" required>
+                                    </div>
+                                    <div class="input-container email col-6 col-md-3 my-2">
+                                        <p class="text-uppercase m-0">Event Result</p>
+                                        <select name="event-result" id="event-result" required>
+                                            <option value="" selected disabled hidden>Select</option>
+                                            <option value="Winner">Winner</option>
+                                            <option value="Runner">Runner</option>
+                                            <option value="Participant">Participant</option>
+                                            <option value="NIL" hidden>NIL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="my-3">
+                                    <button class="btn btn-outline mr-3" id="cancelBtn" type="button">Cancel</button>
+                                    <button class="btn" id="submit" name="submit" type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mx-3 mx-sm-5 mb-3 mb-sm-5">
+                        <div class="table-responsive event-table text-center">
+                            <table class="table table-bordered m-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Edit</th>
+                                        <th scope="col">Delete</th>
+                                        <th scope="col">Event</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">Result</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr id="event-1">
+                                        <td>
+                                            <button id="edit-1" class="edit-btn p-2">
+                                                <div class="d-flex justify-content-center align-items-center"
+                                                    style="width: 20px; height: 20px;">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </div>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button id="delete-1" class="delete-btn p-2">
+                                                <div class="d-flex justify-content-center align-items-center"
+                                                    style="width: 20px; height: 20px;">
+                                                    <i class="fas fa-trash"></i>
+                                                </div>
+                                            </button>
+                                        </td>
+                                        <td>Event 1</td>
+                                        <td>DD-MM-YYYY</td>
+                                        <td>Hackathon</td>
+                                        <td>Winner</td>
+                                    </tr>
+                                    <tr id="event-2">
+                                        <td>
+                                            <button id="edit-2" class="edit-btn p-2">
+                                                <div class="d-flex justify-content-center align-items-center"
+                                                    style="width: 20px; height: 20px;">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </div>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button id="delete-2" class="delete-btn p-2">
+                                                <div class="d-flex justify-content-center align-items-center"
+                                                    style="width: 20px; height: 20px;">
+                                                    <i class="fas fa-trash"></i>
+                                                </div>
+                                            </button>
+                                        </td>
+                                        <td>Event 2</td>
+                                        <td>DD-MM-YYYY</td>
+                                        <td>Coding Contest</td>
+                                        <td>Runner</td>
+                                    </tr>
+                                    <tr id="event-3">
+                                        <td>
+                                            <button id="edit-3" class="edit-btn p-2">
+                                                <div class="d-flex justify-content-center align-items-center"
+                                                    style="width: 20px; height: 20px;">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </div>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button id="delete-3" class="delete-btn p-2">
+                                                <div class="d-flex justify-content-center align-items-center"
+                                                    style="width: 20px; height: 20px;">
+                                                    <i class="fas fa-trash"></i>
+                                                </div>
+                                            </button>
+                                        </td>
+                                        <td>Event 3</td>
+                                        <td>DD-MM-YYYY</td>
+                                        <td>Hackathon</td>
+                                        <td>Participant</td>
+                                    </tr>
+                                    <tr id="event-4">
+                                        <td>
+                                            <button id="edit-4" class="edit-btn p-2">
+                                                <div class="d-flex justify-content-center align-items-center"
+                                                    style="width: 20px; height: 20px;">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </div>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button id="delete-4" class="delete-btn p-2">
+                                                <div class="d-flex justify-content-center align-items-center"
+                                                    style="width: 20px; height: 20px;">
+                                                    <i class="fas fa-trash"></i>
+                                                </div>
+                                            </button>
+                                        </td>
+                                        <td>Event 4</td>
+                                        <td>DD-MM-YYYY</td>
+                                        <td>Course Certification</td>
+                                        <td>NIL</td>
+                                    </tr>
+                                    <tr id="event-5">
+                                        <td>
+                                            <button id="edit-5" class="edit-btn p-2">
+                                                <div class="d-flex justify-content-center align-items-center"
+                                                    style="width: 20px; height: 20px;">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </div>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <button id="delete-5" class="delete-btn p-2">
+                                                <div class="d-flex justify-content-center align-items-center"
+                                                    style="width: 20px; height: 20px;">
+                                                    <i class="fas fa-trash"></i>
+                                                </div>
+                                            </button>
+                                        </td>
+                                        <td>Event 5</td>
+                                        <td>DD-MM-YYYY</td>
+                                        <td>Webinar</td>
+                                        <td>NIL</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script>
+        var el = $("#event-file");
+
+        el.change((e) => {
+            if (e.target.files[0].size < 1024 * 1024)
+                $("#event-filename").val(e.target.files[0].name);
+        });
+        $(document).ready(() => {
+            $("#addEventBtn").click(() => {
+                setTimeout(() => {
+                    $(".details-container").css("transform", "translate(-100%)");
+                    $(".create-event-container").css("transform", "translate(-100%)");
+                }, 0);
+            });
+            $("#cancelBtn").click(() => {
+                $(".create-event-container").css("transform", "translate(0)");
+                $(".details-container").css("transform", "translate(0)");
+            });
+            $("#event-type").change(() => {
+                var type = $("#event-type").val();
+                console.log($("#event-result").val());
+                if (type !== "Hackathon" || type !== "Coding Contest") {
+                    $("#event-result option").removeAttr("selected");
+                    $("#event-result option[value='NIL']").attr("selected", true);
+                    $("#event-result").attr("disabled", "disabled");
+                } else {
+                    var result = $("#event-result").val();
+                    if (result === 'NIL') {
+                        $("#event-result option[value='NIL']").removeAttr("selected");
+                        $("#event-result option[value='']").attr("selected", true);
+                        $("#event-result").removeAttr("disabled");
+                    }
+                }
+            });
+            $(".edit-btn").click(() => {
+                $(".details-container").css("transform", "translate(-100%)");
+                $(".create-event-container").css("transform", "translate(-100%)");
+            });
+        });
+    </script>
+</body>
+
+</html>
